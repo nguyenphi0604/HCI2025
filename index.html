@@ -1,94 +1,109 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-        }
-        .navbar a, .dropdown .dropbtn {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            border: none;
-            background-color: inherit;
-            cursor: pointer;
-        }
-        .navbar a:hover, .dropdown:hover .dropbtn {
-            background-color: #ddd;
-            color: black;
-        }
-        .dropdown {
-            float: left;
-            overflow: hidden;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            z-index: 1;
-        }
-        .dropdown-content a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            text-align: left;
-        }
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .content {
-            padding: 20px;
-        }
-        .cv, .home-message, .lab1 {
-            display: none;
-            margin-top: 20px;
-        }
-        .error {
-            color: red;
-            font-size: 12px;
-            margin-top: 5px;
-        }
-        .preview {
-            width: 100%;
-            height: 200px;
-            border: 1px dashed #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 10px;
-            background-size: cover;
-        }
-        table {
-            width: 100%;
-            margin-top: 10px;
-        }
-        td {
-            padding: 10px;
-        }
-        .button-group {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-    </style>
-    <script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Web</title>
+<style>
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	background-color: #333;
+	overflow: hidden;
+}
+
+.navbar a, .dropdown .dropbtn {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	border: none;
+	background-color: inherit;
+	cursor: pointer;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: #ddd;
+	color: black;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	z-index: 1;
+}
+
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.content {
+	padding: 20px;
+}
+
+.cv, .home-message, .lab1 {
+	display: none;
+	margin-top: 20px;
+}
+
+.error {
+	color: red;
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+.preview {
+	width: 100%;
+	height: 200px;
+	border: 1px dashed #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10px;
+	background-size: cover;
+}
+
+table {
+	width: 100%;
+	margin-top: 10px;
+}
+
+td {
+	padding: 10px;
+}
+
+.button-group {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+</style>
+<script>
         function showCV() {
             document.getElementById("cv").style.display = "block";
             document.getElementById("homeMessage").style.display = "none";
@@ -137,106 +152,116 @@
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="#" onclick="showHomeMessage(); return false;">Home</a>
-        <div class="dropdown">
-            <button class="dropbtn">About</button>
-            <div class="dropdown-content">
-                <a href="#" onclick="showCV()">CV</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">Labs</button>
-            <div class="dropdown-content">
-                <a href="#" onclick="showLab1()">Lab1</a>
-                <a href="#">Lab2</a>
-                <a href="#">Lab3</a>
-            </div>
-        </div>
-    </div>
+	<div class="navbar">
+		<a href="#" onclick="showHomeMessage(); return false;">Home</a>
+		<div class="dropdown">
+			<button class="dropbtn">About</button>
+			<div class="dropdown-content">
+				<a href="#" onclick="showCV()">CV</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropbtn">Labs</button>
+			<div class="dropdown-content">
+				<a href="#" onclick="showLab1()">Lab1</a> <a href="#">Lab2</a> <a
+					href="#">Lab3</a>
+			</div>
+		</div>
+	</div>
 
-    <div class="content">
-        <div id="homeMessage" class="home-message">
-            <h2>Welcome to my web!</h2>
-        </div>
+	<div class="content">
+		<div id="homeMessage" class="home-message">
+			<h2>Welcome to my web!</h2>
+		</div>
 
-        <div id="cv" class="cv">
-            <h2>Curriculum Vitae</h2>
-            <p><strong>Full Name:</strong> Nguyễn Phi</p>
-            <p><strong>Date of Birth:</strong> 06/04/2004</p>
-            <p><strong>Address:</strong> 46/G, tổ 10, kp1, P.Long Bình Tân, Biên Hoà, Đồng Nai</p>
-            <p><strong>Phone:</strong> 0793050219</p>
-            <p><strong>Email:</strong> nguyenphi060404@gmail.com</p>
-            <p><strong>Education Level:</strong> Đại học</p>
-        </div>
+		<div id="cv" class="cv">
+			<h2>Curriculum Vitae</h2>
+			<p>
+				<strong>Full Name:</strong> Nguyễn Phi
+			</p>
+			<p>
+				<strong>Date of Birth:</strong> 06/04/2004
+			</p>
+			<p>
+				<strong>Address:</strong> 46/G, tổ 10, kp1, P.Long Bình Tân, Biên
+				Hoà, Đồng Nai
+			</p>
+			<p>
+				<strong>Phone:</strong> 0793050219
+			</p>
+			<p>
+				<strong>Email:</strong> nguyenphi060404@gmail.com
+			</p>
+			<p>
+				<strong>Education Level:</strong> Đại học
+			</p>
+		</div>
 
-        <div id="lab1" class="lab1">
-            <h2>Create Account</h2>
-            <form id="accountForm">
-                <table>
-                    <tr>
-                        <td><label for="username">Username</label></td>
-                        <td>
-                            <input type="text" id="username" placeholder="Enter your username." required maxlength="255">
-                            <div id="usernameError" class="error hidden">Username is already taken.</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="password">Password</label></td>
-                        <td>
-                            <input type="password" id="password" placeholder="Enter your password." required maxlength="255">
-                            <button type="button" id="togglePassword">Show</button>
-                            <div id="passwordError" class="error hidden">Password does not meet strength requirements.</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="email">Email Address</label></td>
-                        <td>
-                            <input type="email" id="email" placeholder="Enter your email." required maxlength="255">
-                            <div id="emailError" class="error hidden">Invalid email format.</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="fullName">Full Name (optional)</label></td>
-                        <td>
-                            <input type="text" id="fullName" placeholder="Enter your full name." maxlength="255">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="role">Role</label></td>
-                        <td>
-                            <select id="role" required>
-                                <option value="">Select a role...</option>
-                                <option value="admin">Admin</option>
-                                <option value="user">User</option>
-                            </select>
-                            <div id="roleError" class="error hidden">Role is required.</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><label for="profilePicture">Profile Picture</label></td>
-                        <td>
-                            <input type="file" id="profilePicture" accept="image/*">
-                            <div class="preview" id="imagePreview">Image Preview</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Account Created At</td>
-                        <td><p id="accountCreatedAt">2024-09-28</p></td>
-                    </tr>
-                    <tr>
-                        <td>Last Updated At</td>
-                        <td><p id="lastUpdatedAt">2024-09-28</p></td>
-                    </tr>
-                </table>
+		<div id="lab1" class="lab1">
+			<h1>CREATE ACCOUNT</h1>
+			<form>
+				<table>
+					<thead>
+						<tr>
+							<td colspan="2"><b>ACCOUNT INFORMATION</b></td>
+						</tr>
+					</thead>
 
-                <div class="button-group">
-                    <button type="submit" id="submitButton" disabled>Create Account</button>
-                    <button type="button" onclick="cancel()">Cancel</button>
-                </div>
-            </form>
-        </div>
-    </div>
+					<tbody>
+						<tr>
+							<td>Username:</td>
+
+							<td><input type="text" name="username" id="idUsername"
+								placeholder="Enter your username"></td>
+						</tr>
+
+						<tr>
+							<td>Password:</td>
+
+							<td><input type="password" name="password" id="idPassword"
+								placeholder="Enter your password"></td>
+						</tr>
+
+						<tr>
+							<td>Email Address:</td>
+
+							<td><input type="email" name="email" id="idEmail"
+								placeholder="Enter your email"></td>
+						</tr>
+
+						<tr>
+							<td>Full name:</td>
+
+							<td><input type="text" name="fullName" id="idFullName"
+								placeholder="Enter your full name"></td>
+						</tr>
+
+						<tr>
+							<td>Role:</td>
+
+							<td><select name="role" id="idRole">
+									<option value="">Select a role</option>
+									<option value="admin">Admin</option>
+									<option value="user">User</option>
+							</select></td>
+						</tr>
+
+						<tr>
+							<td>Profile Picture:</td>
+
+							<td><input type="file" name="profilePicture"
+								id="idProfilePicture"></td>
+						</tr>
+
+						<tr>
+							<td colspan="2"><input type="submit" value="Create account">
+								<input type="reset" value="Cancel"></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
 
 </body>
 </html>
