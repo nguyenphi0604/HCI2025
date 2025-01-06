@@ -1,30 +1,127 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Lab</title>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-	crossorigin="anonymous">
-<script
-	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-	integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-	crossorigin="anonymous"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-	integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-	crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<title>Lab</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+	<style>
+		.nav-custom {
+			background-color: #333;
+			padding: 10px 0;
+		}
+		.nav-custom a {
+			color: white;
+			text-decoration: none;
+			padding: 10px 20px;
+		}
+		.nav-custom a:hover {
+			background-color: #555;
+		}
+		.nav-custom .active {
+			background-color: #666;
+		}
+		.nav-labs {
+			background-color: #333;
+			padding: 10px 0;
+			margin-top: -1px;
+		}
+		.nav-labs a {
+			color: white;
+			text-decoration: none;
+			padding: 10px 20px;
+		}
+		.nav-labs a:hover {
+			background-color: #555;
+		}
+		.nav-labs .active {
+			background-color: #666;
+		}
+		.breadcrumb {
+			background-color: #f8f9fa;
+			padding: 10px 20px;
+			margin-bottom: 0;
+		}
+		.breadcrumb a {
+			color: #0d6efd;
+			text-decoration: none;
+		}
+		footer {
+			background-color: #333;
+			color: white;
+			text-align: center;
+			padding: 10px 0;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+		#content-frame {
+			width: 100%;
+			height: calc(100vh - 150px);
+			border: none;
+		}
+	</style>
 </head>
 <body>
-	<ul class="nav justify-content-center">
-		<li class="nav-item"><a class="nav-link" href="lab1.html">Lab1</a></li>
-		<li class="nav-item"><a class="nav-link" href="lab2.html">Lab2</a></li>
-		<li class="nav-item"><a class="nav-link" href="lab3_AvailableMaterials.html">Lab3</a></li>
-		<li class="nav-item"><a class="nav-link" href="lab4.html">Lab4</a></li>
-		<li class="nav-item"><a class="nav-link" href="lab5.html">Lab5</a></li>
-		<li class="nav-item"><a class="nav-link" href="lab6.html">Lab6</a></li>
-	</ul>
+	<!-- Main Navigation -->
+	<nav class="nav-custom text-center">
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="#" class="active">Labs</a>
+		<a href="result.html">Result</a>
+	</nav>
+
+	<!-- Labs Navigation -->
+	<nav class="nav-labs text-center">
+		<a href="javascript:void(0)" onclick="loadContent('lab1.html')" class="active">Lab1</a>
+		<a href="javascript:void(0)" onclick="loadContent('lab2.html')">Lab2</a>
+		<a href="javascript:void(0)" onclick="loadContent('lab3.html')">Lab3</a>
+		<a href="javascript:void(0)" onclick="loadContent('lab4.html')">Lab4</a>
+		<a href="javascript:void(0)" onclick="loadContent('lab5.html')">Lab5</a>
+		<a href="javascript:void(0)" onclick="loadContent('lab6.html')">Lab6</a>
+	</nav>
+
+	<!-- Breadcrumb -->
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+			<li class="breadcrumb-item active">Labs</li>
+			<li class="breadcrumb-item active" id="current-lab">Lab1</li>
+		</ol>
+	</nav>
+
+	<!-- Content Frame -->
+	<iframe id="content-frame" src="lab1.html"></iframe>
+
+	<!-- Footer -->
+	<footer>
+		<p>© Nguyễn Phi</p>
+	</footer>
+
+	<script>
+		// Load content when page loads
+		window.onload = function() {
+			loadContent('lab1.html');
+		}
+
+		// Function to load content and update active state
+		function loadContent(url) {
+			document.getElementById('content-frame').src = url;
+			
+			// Update breadcrumb
+			document.getElementById('current-lab').textContent = url.replace('.html', '');
+			
+			// Update active state in navigation
+			const links = document.querySelectorAll('.nav-labs a');
+			links.forEach(link => {
+				if (link.textContent.toLowerCase() === url.replace('.html', '').toLowerCase()) {
+					link.classList.add('active');
+				} else {
+					link.classList.remove('active');
+				}
+			});
+		}
+	</script>
 </body>
 </html>
