@@ -1,241 +1,231 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Exercise</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        .exercise-table {
+            margin-bottom: 20px;
+        }
+        .exercise-item {
+            margin-bottom: 15px;
+        }
+        .exercise-item .description {
+            font-style: italic;
+            color: #6c757d;
+        }
+         .exercise-item .time-limit {
+            font-size: 0.9em;
+            color: #0056b3;
+        }
+         .exercise-item .points {
+            font-size: 0.9em;
+             color: #28a745;
+        }
+         .exercise-item .badge {
+            margin-left: 5px;
+        }
+    </style>
 </head>
 <body>
-	<h2>Select exercise</h2>
-	
-	<!-- Bài tập theo ngôn ngữ lập trình C -->
-	<table border="1">
-		<thead>
-			<tr>
-				<td>
-					<div><b>C</b></div>
-				</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>
-					<!-- Bài tập 1  -->
-					<div>
-						<a href="c1.html">
-							<b>Bài tập 1:</b>
-						</a>
-					</div>
-					
-					<div>
-						Print Number from 1 to N
-					</div>
-					
-					<div>
-						<b>Description:</b> Write a program that allows the user to input 
-						a positive integer N and prints all the numbers from 1 to N.
-					</div>
-					
-					<div>
-						<b>Level:</b> Easy
-					</div>
-					
-					<br/>
-					
-					<!-- Bài tập 2  -->
-					<div>
-						<a href="c2.html"><b>Bài tập 2:</b></a>
-					</div>
-					
-					<div>
-						Calculate the Sum of Even Numbers in an Array
-					</div>
-					
-					<div>
-						<b>Description:</b> Write a program that takes an array of integers as input
-						and calculates the sum of all even numbers in that array.
-					</div>
-					
-					<div>
-						<b>Level:</b> Medium
-					</div>
-					
-					<br/>
-					
-					<!-- Bài tập 3  -->
-					<div>
-						<a href="c3.html"><b>Bài tập 3:</b></a>
-					</div>
-					
-					<div>
-						Sort an Array Using Quick Sort Algorithm
-					</div>
-					
-					<div>
-						<b>Description:</b> Write a program that implements the Quick Sort algorithm 
-						to sort an array of integers in ascending order.
-					</div>
-					
-					<div>
-						<b>Level:</b> Hard
-					</div>
-					
-				</td>	
-			</tr>
-		</tbody>	
-	</table>
-	
-	<br/>
-	
-	<!-- Bài tập theo ngôn ngữ lập trình Java -->	
-	<table border="1">
-		<thead>
-			<tr>
-				<td>
-					<div><b>Java</b></div>
-				</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>
-					<!-- Bài tập 1 -->
-					<div>
-						<a href="java1.html"><b>Bài tập 1:</b></a>
-					</div>
-					
-					<div>
-						Find the Factorial of a Number
-					</div>
-					
-					<div>
-						<b>Description:</b> Write a program that takes a positive integer 
-						as input and calculates its factorial using recursion.
-					</div>
-					
-					<div>
-						<b>Level:</b> Easy
-					</div>
-					
-					<br/>
-					
-					<!-- Bài tập 2  -->
-					<div>
-						<a href="java2.html"><b>Bài tập 2:</b></a>
-					</div>
-					
-					<div>
-						Reverse a String
-					</div>
-					
-					<div>
-						<b>Description:</b> Write a program that takes a string as input 
-						and outputs the string in reverse order.
-					</div>
-					
-					<div>
-						<b>Level:</b> Medium
-					</div>
-					
-					<br/>
-					
-					<!-- Bài tập 3  -->
-					<div>
-						<a href="java3.html"><b>Bài tập 3:</b></a>
-					</div>
-					
-					<div>
-						 Check for Prime Number
-					</div>
-					
-					<div>
-						<b>Description:</b> Write a program that checks whether a given 
-						number is a prime number or not.
-					</div>
-					
-					<div>
-						<b>Level:</b> Hard
-					</div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	
-	<br/>
-	
-	<!-- Bài tập theo ngôn ngữ lập trình Python -->
-	<table border="1">
-		<thead>
-			<tr>
-				<td>
-					<div><b>Python</b></div>
-				</td>
-			</tr>
-		</thead>
-		
-		<tbody>
-			<tr>
-				<td>
-					<!-- Bài tập 1 -->
-					<div>
-						<a href="python1.html"><b>Bài tập 1:</b></a>
-					</div>
-					
-					<div>
-						Count Vowels in a String
-					</div>
-					
-					<div>
-						<b>Description:</b> Write a program that takes a string as input 
-						and counts the number of vowels (a, e, i, o, u) in that string.
-					</div>
-					
-					<div>
-						<b>Level:</b> Easy
-					</div>
-					
-					<br/>
-					
-					<!-- Bài tập 2  -->
-					<div>
-						<a href="python2.html"><b>Bài tập 2:</b></a>
-					</div>
-					
-					<div>
-						Generate Fibonacci Sequence
-					</div>
-					
-					<div>
-						<b>Description:</b> Write a program that generates the Fibonacci 
-						sequence up to the N-th term, where N is provided by the user.
-					</div>
-					
-					<div>
-						<b>Level:</b> Medium
-					</div>
-					
-					<br/>
-					
-					<!-- Bài tập 3  -->
-					<div>
-						<a href="python3.html"><b>Bài tập 3:</b></a>
-					</div>
-					
-					<div>
-						 Merge Two Dictionaries
-					</div>
-					
-					<div>
-						<b>Description:</b> Write a program that merges two dictionaries and 
-						prints the result. If there are duplicate keys, 
-						the values from the second dictionary should overwrite the first.
-					</div>
-					
-					<div>
-						<b>Level:</b> Hard
-					</div>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+    <div class="container">
+        <h2 class="my-4">Exercise Platform</h2>
+
+        <!-- Filter by language -->
+        <div class="mb-3">
+            <label for="languageFilter" class="form-label">Filter by Language:</label>
+            <select id="languageFilter" class="form-select" onchange="filterExercises()">
+                <option value="all">All</option>
+                <option value="c">C</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+            </select>
+            </div>
+          <!-- Search bar -->
+        <div class="mb-3">
+            <label for="searchExercises" class="form-label">Search Exercises:</label>
+            <div class="input-group">
+                <input type="text" id="searchExercises" class="form-control" placeholder="Enter keywords" onkeyup="searchExercises()">
+                <button class="btn btn-outline-secondary" type="button" onclick="searchExercises()">
+                   <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Exercise List (Initially Displayed) -->
+        <div id="exerciseList">
+        <!-- Bài tập theo ngôn ngữ lập trình C -->
+        <table class="table table-bordered exercise-table" data-language="c">
+            <thead class="table-light">
+                <tr>
+                    <th>
+                        <div class="fw-bold">C</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                         <div class="exercise-item" data-exercise-id="c1" data-status="not-started" data-keywords="print number">
+                            <a href="exercise_detail.html?id=c1" class="fw-bold text-decoration-none">Bài tập 1: Print Number</a>
+                             <div class="description">Print numbers from 1 to N.</div>
+                            <div><span class="fw-bold">Level:</span> <span class="badge bg-success">Easy</span></div>
+                            <div class="time-limit">Time Limit: 1 second</div>
+                            <div class="points">Points: 10</div>
+                            <div class="status-badge">
+                                    <span class="badge bg-secondary">Not Started</span>
+                                </div>
+                        </div>
+                         <div class="exercise-item" data-exercise-id="c2" data-status="in-progress" data-keywords="sum even array">
+                            <a href="exercise_detail.html?id=c2" class="fw-bold text-decoration-none">Bài tập 2: Sum Even Numbers</a>
+                             <div class="description">Calculate the sum of even numbers in an array.</div>
+                            <div><span class="fw-bold">Level:</span> <span class="badge bg-warning text-dark">Medium</span></div>
+                            <div class="time-limit">Time Limit: 2 seconds</div>
+                            <div class="points">Points: 20</div>
+                             <div class="status-badge">
+                                    <span class="badge bg-warning text-dark">In Progress</span>
+                                </div>
+                        </div>
+                         <div class="exercise-item" data-exercise-id="c3" data-status="completed" data-keywords="quick sort algorithm">
+                            <a href="exercise_detail.html?id=c3" class="fw-bold text-decoration-none">Bài tập 3: Quick Sort</a>
+                             <div class="description">Sort an array using the Quick Sort algorithm.</div>
+                            <div><span class="fw-bold">Level:</span> <span class="badge bg-danger">Hard</span></div>
+                            <div class="time-limit">Time Limit: 3 seconds</div>
+                            <div class="points">Points: 30</div>
+                             <div class="status-badge">
+                                    <span class="badge bg-success">Completed</span>
+                                </div>
+                         </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Bài tập theo ngôn ngữ lập trình Java -->
+        <table class="table table-bordered exercise-table" data-language="java">
+            <thead class="table-light">
+                <tr>
+                    <th>
+                        <div class="fw-bold">Java</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                          <div class="exercise-item" data-exercise-id="java1" data-status="not-started" data-keywords="factorial recursion">
+                            <a href="exercise_detail.html?id=java1" class="fw-bold text-decoration-none">Bài tập 1: Factorial</a>
+                             <div class="description">Find the factorial of a number using recursion.</div>
+                             <div><span class="fw-bold">Level:</span> <span class="badge bg-success">Easy</span></div>
+                            <div class="time-limit">Time Limit: 1 second</div>
+                            <div class="points">Points: 10</div>
+                             <div class="status-badge">
+                                    <span class="badge bg-secondary">Not Started</span>
+                                </div>
+                        </div>
+                        <div class="exercise-item" data-exercise-id="java2" data-status="in-progress" data-keywords="reverse string">
+                            <a href="exercise_detail.html?id=java2" class="fw-bold text-decoration-none">Bài tập 2: Reverse String</a>
+                            <div class="description">Reverse a string.</div>
+                            <div><span class="fw-bold">Level:</span> <span class="badge bg-warning text-dark">Medium</span></div>
+                            <div class="time-limit">Time Limit: 2 seconds</div>
+                            <div class="points">Points: 20</div>
+                            <div class="status-badge">
+                                    <span class="badge bg-warning text-dark">In Progress</span>
+                                </div>
+                        </div>
+                         <div class="exercise-item" data-exercise-id="java3" data-status="completed" data-keywords="prime number">
+                             <a href="exercise_detail.html?id=java3" class="fw-bold text-decoration-none">Bài tập 3: Prime Number</a>
+                            <div class="description">Check if a number is prime.</div>
+                             <div><span class="fw-bold">Level:</span> <span class="badge bg-danger">Hard</span></div>
+                             <div class="time-limit">Time Limit: 3 seconds</div>
+                             <div class="points">Points: 30</div>
+                             <div class="status-badge">
+                                    <span class="badge bg-success">Completed</span>
+                                </div>
+                         </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Bài tập theo ngôn ngữ lập trình Python -->
+        <table class="table table-bordered exercise-table" data-language="python">
+            <thead class="table-light">
+                <tr>
+                    <th>
+                        <div class="fw-bold">Python</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                         <div class="exercise-item" data-exercise-id="python1" data-status="not-started" data-keywords="count vowels string">
+                            <a href="exercise_detail.html?id=python1" class="fw-bold text-decoration-none">Bài tập 1: Count Vowels</a>
+                             <div class="description">Count vowels in a string.</div>
+                            <div><span class="fw-bold">Level:</span> <span class="badge bg-success">Easy</span></div>
+                            <div class="time-limit">Time Limit: 1 second</div>
+                            <div class="points">Points: 10</div>
+                             <div class="status-badge">
+                                    <span class="badge bg-secondary">Not Started</span>
+                                </div>
+                        </div>
+                        <div class="exercise-item" data-exercise-id="python2" data-status="in-progress" data-keywords="fibonacci sequence">
+                            <a href="exercise_detail.html?id=python2" class="fw-bold text-decoration-none">Bài tập 2: Fibonacci Sequence</a>
+                            <div class="description">Generate the Fibonacci sequence.</div>
+                            <div><span class="fw-bold">Level:</span> <span class="badge bg-warning text-dark">Medium</span></div>
+                             <div class="time-limit">Time Limit: 2 seconds</div>
+                            <div class="points">Points: 20</div>
+                             <div class="status-badge">
+                                    <span class="badge bg-warning text-dark">In Progress</span>
+                                </div>
+                        </div>
+                         <div class="exercise-item" data-exercise-id="python3" data-status="completed" data-keywords="merge dictionary">
+                            <a href="exercise_detail.html?id=python3" class="fw-bold text-decoration-none">Bài tập 3: Merge Dictionaries</a>
+                             <div class="description">Merge two dictionaries.</div>
+                           <div><span class="fw-bold">Level:</span> <span class="badge bg-danger">Hard</span></div>
+                            <div class="time-limit">Time Limit: 3 seconds</div>
+                            <div class="points">Points: 30</div>
+                             <div class="status-badge">
+                                    <span class="badge bg-success">Completed</span>
+                                </div>
+                         </div>
+                   </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+          function filterExercises() {
+                const languageFilter = document.getElementById('languageFilter').value;
+                const exerciseTables = document.querySelectorAll('.exercise-table');
+                exerciseTables.forEach(table => {
+                    if (languageFilter === 'all' || table.dataset.language === languageFilter) {
+                        table.style.display = '';
+                    } else {
+                         table.style.display = 'none';
+                    }
+                  });
+             }
+       function searchExercises() {
+                const searchInput = document.getElementById('searchExercises').value.toLowerCase();
+                const exerciseItems = document.querySelectorAll('.exercise-item');
+                exerciseItems.forEach(item => {
+                    const keywords = item.dataset.keywords.toLowerCase();
+                    const title = item.querySelector('a').textContent.toLowerCase();
+                  const description = item.querySelector('.description').textContent.toLowerCase();
+                    if (keywords.includes(searchInput) || title.includes(searchInput) || description.includes(searchInput)) {
+                       item.style.display = '';
+                    } else {
+                       item.style.display = 'none';
+                    }
+                 });
+            }
+    </script>
 </body>
 </html>
