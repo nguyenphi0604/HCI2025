@@ -14,54 +14,54 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/lesson.css">
-    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="../../css/lesson.css">
+    <link rel="stylesheet" href="../../css/font.css">
     <title>C# lesson</title>
 </head>
 
 <body>
     <div class="container">
-       <div class="main-content row">
-                <div class="sidebar col-3">
-                    <a href="#" onclick="showTab(event, 'lesson1')">Lesson1</a>
-                    <a href="#" onclick="showTab(event, 'lesson2')">lesson2</a>
-                    <a href="#" onclick="showTab(event, 'lesson3')">Lesson3</a>
-                </div>
-
-                <div class="content col-9">
-                    <div id="lesson1" class="tab-content active">
-                        <h1>Lesson1</h1>
-                        <iframe src="/document/csharp/lesson/CSharp - Module 1.pdf" width="100%" height="600px"></iframe>
-                    </div>
-                    <div id="lesson2" class="tab-content">
-                        <h1>Lesson2</h1>
-                        <iframe src="/document/csharp/lesson/CSharp - Module 2.pdf" width="100%" height="600px"></iframe>
-                    </div>
-                    <div id="lesson3" class="tab-content">
-                        <h1>Lesson3</h1>
-                        <iframe src="/document/csharp/lesson/CSharp - Module 3.pdf" width="100%" height="600px"></iframe>
-                    </div>
-                </div>
-
-                <div class="back-button mb-2">
-                    <button onclick="goBack()">Backs</button>
-                </div>
-
+        <div class="main-content row">
+            <div class="sidebar col-3">
+                <a href="#" onclick="showTab(event, 'lesson1')">Lesson1</a>
+                <a href="#" onclick="showTab(event, 'lesson2')">lesson2</a>
+                <a href="#" onclick="showTab(event, 'lesson3')">Lesson3</a>
             </div>
-            <script>
-                function showTab(event, tabId) {
-                    event.preventDefault();
-                    var tabs = document.getElementsByClassName("tab-content");
-                    for (var i = 0; i < tabs.length; i++) {
-                        tabs[i].classList.remove("active");
-                    }
-                    document.getElementById(tabId).classList.add("active");
-                }
 
-                function goBack() {
-                    window.history.back();
+            <div class="content col-9">
+                <div id="lesson1" class="tab-content active">
+                    <h1>Lesson1</h1>
+                    <iframe src="/document/csharp/lesson/CSharp - Module 1.pdf" width="100%" height="600px"></iframe>
+                </div>
+                <div id="lesson2" class="tab-content">
+                    <h1>Lesson2</h1>
+                    <iframe src="/document/csharp/lesson/CSharp - Module 2.pdf" width="100%" height="600px"></iframe>
+                </div>
+                <div id="lesson3" class="tab-content">
+                    <h1>Lesson3</h1>
+                    <iframe src="/document/csharp/lesson/CSharp - Module 3.pdf" width="100%" height="600px"></iframe>
+                </div>
+            </div>
+
+            <div class="back-button mb-2">
+                <button onclick="goBack()">Backs</button>
+            </div>
+
+        </div>
+        <script>
+            function showTab(event, tabId) {
+                event.preventDefault();
+                var tabs = document.getElementsByClassName("tab-content");
+                for (var i = 0; i < tabs.length; i++) {
+                    tabs[i].classList.remove("active");
                 }
-            </script>
-        </body>
+                document.getElementById(tabId).classList.add("active");
+            }
+
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+</body>
 
 </html>
