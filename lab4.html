@@ -1,141 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Learning Dashboard</title>
-<link rel="stylesheet" href="css/styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+		integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/lab4.css">
+	<link rel="stylesheet" href="css/font.css">
+	<title>Lab4</title>
 </head>
+
 <body>
-	<!-- Thanh điều hướng -->
-	<nav>
-		<ul>
-			<li>Business Operations</li>
-			<li>Cloud Computing</li>
-			<li>Cybersecurity</li>
-			<li>Data Science</li>
-			<li>Development</li>
-			<li>IT Operations</li>
-			<li>Language Learning</li>
-			<li>Leadership & Management</li>
-			<li>Marketing</li>
-		</ul>
-	</nav>
-
-	<!-- Nội dung chính -->
-	<div class="main-content">
-		<!-- Phần thông tin người dùng -->
-		<div class="user-info">
-			<div class="welcome">
-				<h2>Welcome back, Nguyen Phi</h2>
-				<a href="#" class="edit-info">Add occupation and interests</a>
+	<div id="main">
+		<div class="header">
+			<div class="header-tab">
+				<div class="d-flex justify-content-center py-3">
+					<ul class="nav nav-pills">
+						<li class="nav-item"><a href="#" class="nav-link text-dark" aria-current="page">Business
+								Operations</a></li>
+						<li class="nav-item"><a href="#" class="nav-link text-dark">Cloud Computing</a></li>
+						<li class="nav-item"><a href="#" class="nav-link text-dark">Cybersecurity</a></li>
+						<li class="nav-item"><a href="#" class="nav-link text-dark">Data Science</a></li>
+						<li class="nav-item"><a href="#" class="nav-link text-dark">Development</a></li>
+						<li class="nav-item"><a href="#" class="nav-link text-dark">IT Operation</a></li>
+						<li class="nav-item"><a href="#" class="nav-link text-dark">Language Learning</a></li>
+						<li class="nav-item"><a href="#" class="nav-link text-dark">Leadership &#38; Management </a>
+						</li>
+						<li class="nav-item"><a href="#" class="nav-link text-dark">Marketing</a></li>
+					</ul>
+				</div>
 			</div>
 
-			<!-- Chia phần "Weekly streak", "2 weeks", và "11/30 course min" thành 3 cột -->
-			<div class="streak-columns">
-				<!-- Cột 1: Weekly streak -->
-				<div class="streak-header">
-					<p>
-						<strong>Weekly streak</strong>
-					</p>
-					<p>One ring down, one to go. Keep it up!</p>
-				</div>
+			<div class="header-title">
+				<div class="header-title-content">
+					<div class="title1">
+						<img src="image/lab4/2.jpg" alt="" class="img" height="100px">
+					</div>
 
-				<!-- Cột 2: 2 weeks -->
-				<div class="streak-info">
-					<span class="streak-number">2</span> weeks
-					<p class="current-streak">Current streak</p>
-				</div>
+					<div class="title2">
+						<b>
+							<h3><b>Welcome back, Nguyen Phi</b></h3>
+						</b>
+						<p>Add occupation and interests</p>
 
-				<!-- Cột 3: 11/30 course min và 4/1 visit -->
-				<div class="progress-info">
-					<span>11/30 course min</span> <span>4/1 visit</span> <span>(Oct
-						13 - 19)</span> <a href="#" class="view-activity">See all activity</a>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Phần khóa học (Pick up where you left off) -->
-		<div class="course-section">
-			<h3>Pick up where you left off</h3>
-			<div class="course-cards">
-				<!-- Khóa học 1 -->
-				<div class="course-card">
-					<img src="image/card/introduction.jpg"
-						alt="Hình ảnh bìa cho khóa học FPT ISMS Refresh Training S2">
-					<p>
-						<strong>FPT_ISMS Refresh Training S2 2024 (Video)</strong>
-					</p>
-					<p>1. Introduction • 1m</p>
+		<div class="container1">
+			<div class="content1">
+				<div class="row">
+					<div class="col-6">
+
+						<div class="content1-right">
+							<h5><b>Weekly streat</b></h5>
+							<p>One ring down, one to go. Keep it up!</p>
+						</div>
+					</div>
+
+					<div class="col-5 row content1-left">
+						<div class="col-6 content1-left1">
+							<img src="image/lab4/fire.jpg" alt="" height="70px">
+							<div class="left1-content-sub">
+								<ul>
+									<li>2 Weeks</li>
+									<li> Current streak</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-6 content1-left2">
+							<img src="image/lab4/circle.jpg" alt="">
+							<div class="left2-content-sub">
+								<ul>
+									<li>11/30 course min</li>
+									<li> 4/1 visit</li>
+									<li>Oct 13 - 19</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-1 icon-than"> <img src="image/lab4/chamthan.png" alt=""></div>
 				</div>
 
-				<!-- Khóa học 2 -->
-				<div class="course-card">
-					<img src="image/card/integration.jpg"
-						alt="Hình ảnh bìa cho khóa học MuleSoft 4.X Complete Guide">
-					<p>
-						<strong>MuleSoft 4.X Complete Guide For Beginners</strong>
-					</p>
-					<p>2. Integration introduction • 6m left</p>
+				<div class="content1-footer"><a href="">See all activity</a></div>
+			</div>
+
+			<div class="content2">
+
+				<div class="content2-right">
+					<b>
+						<h2>Pick up where you left off</h2>
+					</b>
+				</div>
+				<div class="content2-left">
+					<a href="">My learning</a>
 				</div>
 
-				<!-- Khóa học 3 -->
-				<div class="course-card">
-					<img src="image/card/quiz.png"
-						alt="Hình ảnh bìa cho khóa học English Vocabulary">
-					<p>
-						<strong>English Vocabulary: 504 Essential Words</strong>
-					</p>
-					<p>7. Quiz and Questions • 9 questions</p>
+
+			</div>
+
+			<div class="content3">
+				<div class="content3-tab">
+					<ul class="nav nav-tabs">
+						<li class="nav-item">
+							<a class="nav-link text-muted" aria-current="page" href="#">Courses</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-muted" href="#">Learning paths</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-muted" href="#">Certification preparation</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="content4 row">
+				<div class="content4-sub col-4">
+					<img src="image/lab4/1.png" alt="">
+					<div class="content4-sub2">
+						<p>FPT_ISMS Refresh Training S2 2024</p>
+						<ol>
+							<li>Introdution</li>
+						</ol>
+						<p>Lecture <img src="" alt=""> 1m </p>
+					</div>
+				</div>
+
+				<div class="content4-sub col-4">
+					<img src="image/lab4/2.png" alt="">
+					<div class="content4-sub2">
+						<p>MuleSoft 4.X Complete Guide For Begi...</p>
+						<ol>
+							<li>Integration introduction</li>
+						</ol>
+						<p>Lecture <sup>.</sup> 6m left </p>
+					</div>
+				</div>
+
+				<div class="content4-sub col-4">
+					<img src="image/lab4/5.png" alt="">
+					<div class="content4-sub2">
+						<p>English Vocabulary: 504 Essential Wor...</p>
+						<ol>
+							<li> Quiz and Questions</li>
+						</ol>
+						<p>Quiz 9 question </p>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<!-- Phần gợi ý chứng chỉ (Based on your certification interests) -->
-		<div class="recommend-section">
-			<h3>Based on your certification interests, we recommend</h3>
-			<div class="cert-cards">
-				<!-- Chứng chỉ 1 -->
-				<div class="cert-card">
-					<img src="image/slider/java-programmer.jpg"
-						alt="Oracle Certified Associate">
-					<p>
-						<strong>Oracle Certified Associate Java Programmer
-							(OCAJP) 1Z0-808</strong>
-					</p>
-				</div>
-
-				<!-- Chứng chỉ 2 -->
-				<div class="cert-card">
-					<img src="image/slider/certification.jpg"
-						alt="Oracle Java Certification">
-					<p>
-						<strong>Oracle Java Certification - Pass the Associate
-							1Z0-808 Exam</strong>
-					</p>
-				</div>
-
-				<!-- Chứng chỉ 3 -->
-				<div class="cert-card">
-					<img src="image/slider/complete.jpg"
-						alt="Complete Java SE 8 Developer">
-					<p>
-						<strong>Complete Java SE 8 Developer Bootcamp - OCA Prep
-							Included</strong>
-					</p>
-				</div>
-
-				<!-- Chứng chỉ 4 -->
-				<div class="cert-card">
-					<img src="image/slider/spring.jpg"
-						alt="Spring Professional Certification">
-					<p>
-						<strong>Spring Professional Certification Exam Tutorial -
-							Module 02</strong>
+			<div class="content5">
+				<div class="content5-sub">
+					<p> <span>Based on your Certification interests, we recommend </span>
+						<a href="">Edit certification interests</a>
 					</p>
 				</div>
 			</div>
+
+			<div class="content6 row">
+				<div class="content6-sub col-3 ">
+					<img src="image/lab4/java.png" alt="">
+					<ul>
+						<li>Oracle Certified Associate Java Programmer (OCAJP) 1Z0O-808</li>
+						<li>Andrii Piatakha, Learn IT University</li>
+						<li>4.6 <img src="img/img-lab4/sao.png" alt=""> (438)</li>
+					</ul>
+				</div>
+
+				<div class="content6-sub col-3 ">
+					<img src="image/lab4/duoi2.png" alt="">
+					<ul>
+						<li>Oracle Java Certification - Pass the Associate 1ZO-808 Exam.</li>
+						<li>Tim Buchalka's Programing Academy, Goran... </li>
+						<li>4.6 <img src="img/img-lab4/sao.png" alt=""> (5,906)</li>
+					</ul>
+				</div>
+
+				<div class="content6-sub col-3 ">
+					<img src="image/lab4/duoi3.png" alt="">
+					<ul>
+						<li>Complete Java SE 8 Developer Bootcamp - OCA Prep Inclued</li>
+						<li>Intertech Training, Jeff Jensen</li>
+						<li>4.6 <img src="image/lab4/sao.png" alt=""> (5,906)</li>
+					</ul>
+				</div>
+
+				<div class="content6-sub col-3 ">
+					<img src="image/lab4/python.png" alt="">
+					<ul>
+						<li>lập trình Python All</li>
+						<li>Nguyễn Mạnh</li>
+						<li>4.6 <img src="image/lab4/sao.png" alt=""> (5,906)</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="content7">
+				<div class="icon-x">
+					<img src="image/lab4/icon-x.png" alt="">
+				</div>
+				<div class="icon-person">
+					<img src="image/lab4/icon-person.png" alt="">
+				</div>
+				<h3>Personalize your learning experience</h3>
+				<p>Add your occupation and interests to get better content recommendations. </p>
+				<button class="content7-btn">Add occupation and interests
+				</button>
+			</div>
+
 		</div>
 	</div>
 </body>
+
 </html>

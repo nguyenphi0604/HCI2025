@@ -1,98 +1,188 @@
-@charset "UTF-8";
-
 * {
-    box-sizing: border-box;
-    margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-body {
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f6f9;
+    justify-content: space-between;
+    background-color: #3a88dd;
+    height: 50px;
+}
+
+.header .title-header {
+    padding-left: 30px;
+    line-height: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+.icon {
+    padding-right: 30px;
+    line-height: 50px;
+    color: white;
 }
 
 .container {
-    width: 100%;
-    max-width: 800px; /* Giới hạn chiều rộng của container */
-    text-align: center;
-    padding: 20px;
+    margin-top: 20px;
 }
 
-h2 {
-    font-size: 24px;
+.monhoc-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+
+.monhoc-container>.monhoc {
+    display: flex;
+    justify-content: space-around;
+    margin: 70px;
+
+}
+
+.monhoc-content {
+    border: 2px solid;
+    border-radius: 5px;
+    width: 339px;
+    height: 300px;
+
+}
+
+
+.file-icon {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 15px;
+
+}
+
+.title {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 27px;
+    margin-bottom: 15px;
+
+}
+
+.view-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.view-button>a {
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.view-button>a>button {
+    border-radius: 5px;
+    padding: 5px 17px;
+
+}
+
+
+.btn-back {
+    float: right;
+
+}
+
+.btn-back>a {
+    border: 2px solid blue;
+    background-color: #1982ff;
+    text-decoration: none;
+    color: black;
+    padding: 10px 70px;
+    border-radius: 5px;
+}
+
+.btn-back:hover {
+    opacity: 0.8;
+}
+
+.title>.title-1 {
+    font-weight: bold;
+
+}
+
+.title>.title-2 {
+    background-color: #535353;
+    color: white;
+}
+
+.monhoc-content-sub {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cột */
-    gap: 20px;
-}
-
-.card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.card img {
-    height: 40px;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.label {
-    background-color: #555;
+.button-1 {
+    margin-right: 5px;
     color: white;
-    padding: 3px 5px;
-    border-radius: 4px;
-    font-size: 12px;
-    margin-left: 5px;
+    border-color: #1982ff;
+    background-color: #378bef;
 }
 
-.card p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
+.button-1:hover {
+    opacity: 0.7;
     cursor: pointer;
 }
 
-button:hover {
+.button-2 {
+    background-color: white;
+    color: #9fa8ac;
+    border-color: #9fa8ac;
+    font-weight: bold;
+}
+
+.button-2:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+
+
+.custom-button {
+    background-color: #1a1a2e;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.custom-button:hover {
+    background-color: #16213e;
     opacity: 0.9;
 }
 
-button.guide {
-    background-color: #ddd;
-    color: #333;
+.form-control,
+.form-select {
+    border-radius: 0;
+    /* Xóa bỏ border-radius */
 }
 
-button.guide:hover {
-    background-color: #ccc;
+.content-container {
+    flex: 1;
+    padding-bottom: 60px; /* Space for footer */
 }
 
-button:not(.guide) {
-    background-color: #007bff;
-    color: white;
+/* Sticky footer styling */
+.footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px 0;
+    border-top: 1px solid #dee2e6;
+   
 }

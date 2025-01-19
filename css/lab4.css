@@ -1,0 +1,137 @@
+.w-25 {
+    width: 25%;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.header-tab {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* bóng nhạt với độ mờ */
+}
+
+.header-title {
+    background-color: rgba(247, 249, 250, 1);
+    padding-bottom: 33px;
+}
+
+.header-title-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-title-content>.title2>p {
+    color: rgba(62, 4, 192, 1);
+}
+
+.container1 {
+    margin: 0px 19px;
+}
+
+.content1 {
+    border: 2px solid #ccc;
+    margin-top: 48px;
+}
+
+.content1-right {
+    margin-top: 30px;
+    margin-left: 16px;
+}
+
+.content1-left {
+    margin-top: 30px;
+}
+
+.content1-left ul {
+    list-style-type: none;
+}
+
+.content1-left1 {
+    display: flex;
+
+}
+
+.content1-left2 {
+    display: flex;
+}
+
+.icon-than {
+    margin-top: 30px;
+}
+
+
+.content1>.content1-footer {
+    text-align: right;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.content2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+.content4 {
+    margin-top: 16px;
+    margin-bottom: 24px;
+
+}
+
+.content4>.content4-sub {
+    display: flex;
+}
+
+.content4-sub>.content4-sub2 {
+    border: 1px solid #ccc;
+}
+
+.content4-sub2 p:first-of-type {
+    margin-left: 10px;
+}
+
+.content4-sub2 p:last-of-type {
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.content5 {}
+
+.content5 .content5-sub>p>span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.content6 {
+    margin-bottom: 48px;
+
+}
+
+.content6-sub>ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.content7 {
+    border: 2px dotted #ccc;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.icon-x {
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+
+.content7-btn {
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+}
