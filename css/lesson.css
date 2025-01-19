@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+.main-content {
+    display: flex;
+    flex-grow: 1;
+}
+.sidebar {
+    width: 250px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.sidebar a {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    color: black;
+    text-decoration: none;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+.sidebar a:hover {
+    background-color: #ccc;
+}
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+.back-button {
+    text-align: center;
+    margin-top: 20px;
+}
+.back-button button {
+    float: right;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.back-button button:hover {
+    background-color: #0056b3;
+}

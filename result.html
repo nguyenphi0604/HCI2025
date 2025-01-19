@@ -4,68 +4,78 @@
     <meta charset="UTF-8">
     <title>Result</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .nav-custom {
-            background-color: #333;
-            padding: 10px 0;
-        }
-        .nav-custom a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-        }
-        .nav-custom a:hover {
-            background-color: #555;
-        }
-        .nav-custom .active {
+        .nav-custom .nav-link.active {
             background-color: #666;
         }
+
+        .main-content {
+            padding-top: 100px;
+            min-height: calc(100vh - 120px);
+        }
+
+        footer {
+            width: 100%;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .icon-space {
+            margin-left: 5px;
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+        }
+
         .breadcrumb {
-            background-color: #f8f9fa;
+            background-color: #e9ecef;
             padding: 10px 20px;
             margin-bottom: 20px;
         }
+
         .breadcrumb a {
             color: #0d6efd;
             text-decoration: none;
         }
+
         .content-section {
-            padding: 20px;
-        }
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .col-md-3 {
-            display: flex;
+           padding: 20px 0;
         }
         .card {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
+           
             border: 1px solid #ddd;
             border-radius: 8px;
             margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+             background-color: #f8f9fa;
+         }
+
+        .card:hover {
+             transform: scale(1.02);
         }
-        .card-body {
-            flex: 1;
+         .card-body {
             display: flex;
-            flex-direction: column;
+             flex-direction: column;
             padding: 20px;
-            text-align: center;
+             text-align: center;
         }
-        .card-title {
+
+         .card-title {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.2em;
             margin-bottom: 15px;
-            color: #333;
-        }
+            color: #343a40;
+            font-weight: 500;
+         }
+
         .btn-view {
             width: 100%;
             background-color: #007bff;
@@ -73,29 +83,82 @@
             border: none;
             padding: 8px 0;
             border-radius: 4px;
+            transition: background-color 0.3s ease-in-out;
         }
+
         .btn-view:hover {
             background-color: #0056b3;
-            color: white;
+             color: white;
         }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .container-fluid {
+             padding-left: 0;
+             padding-right: 0;
         }
+        .navbar-brand {
+           margin-right: 10px;
+        }
+        .navbar-nav .nav-link {
+            padding: 5px 15px;
+        }
+        .navbar-nav .btn {
+            margin-left: 5px;
+        }
+        .fixed-bottom {
+          position: relative;
+         }
+       .card-equal-height {
+           display: flex;
+        }
+          .card-img-top {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            max-height: 200px; /* Điều chỉnh chiều cao tối đa nếu muốn */
+            object-fit: cover; /* Đảm bảo ảnh vừa vặn khung */
+         }
+        .card-img-top + .card-body {
+             display: flex;
+            flex-direction: column;
+        }
+      
     </style>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="nav-custom text-center">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="lab.html">Labs</a>
-        <a href="#" class="active">Result</a>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://is.vnecdn.net/v101/31/65/11/4116531/assets/images/logo/logo-50.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"><i class="fas fa-home icon-space"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-info-circle icon-space"></i>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lab.html"><i class="fas fa-flask icon-space"></i>Labs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="result.html"><i class="fas fa-chart-bar icon-space"></i>Result</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="lab2.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="lab1.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <!-- Breadcrumb -->
@@ -107,45 +170,79 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="content-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <!-- Card 1 -->
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Directory page web nhóm</h5>
-                            <a href="https://letuanphat21.github.io/giao-tiep-nguoi-may/directory.html" class="btn btn-view">View</a>
+    <div class="container-fluid main-content">
+        <div class="content-section">
+            <div class="container">
+                <div class="row justify-content-center card-equal-height">
+                     <!-- Card 1 -->
+                    <div class="col-md-3 mb-3">
+                        <div class="card h-100">
+                             <img src="image/result/directory_web_nhom.jpg" class="card-img-top" alt="Mô tả ảnh">
+                            <div class="card-body">
+                                <h5 class="card-title">Directory page web nhóm</h5>
+                                <a href="https://letuanphat21.github.io/giao-tiep-nguoi-may/directory.html"
+                                    class="btn btn-view">View</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Login page web project</h5>
-                            <a href="https://letuanphat21.github.io/web_project/login.html" class="btn btn-view">View</a>
+        
+                    <!-- Card 2 -->
+                    <div class="col-md-3 mb-3">
+                         <div class="card h-100">
+                            <img src="image/result/login_web_project.jpg" class="card-img-top" alt="Mô tả ảnh">
+                            <div class="card-body">
+                                <h5 class="card-title">Login page web project</h5>
+                                <a href="https://letuanphat21.github.io/web_project/login.html"
+                                    class="btn btn-view">View</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Account management page web project</h5>
-                            <a href="https://letuanphat21.github.io/web_project/admin/accountManagement.html" class="btn btn-view">View</a>
+        
+                    <!-- Card 3 -->
+                    <div class="col-md-3 mb-3">
+                         <div class="card h-100">
+                             <img src="image/result/account_web_project.jpg" class="card-img-top" alt="Mô tả ảnh">
+                            <div class="card-body">
+                                <h5 class="card-title">Account management page web project</h5>
+                                <a href="https://letuanphat21.github.io/web_project/admin/accountManagement.html"
+                                    class="btn btn-view">View</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Directory page web project</h5>
-                            <a href="https://letuanphat21.github.io/web_project/directory.html" class="btn btn-view">View</a>
+        
+                    <!-- Card 4 -->
+                    <div class="col-md-3 mb-3">
+                         <div class="card h-100">
+                            <img src="image/result/directory_web_project.jpg" class="card-img-top" alt="Mô tả ảnh">
+                            <div class="card-body">
+                                <h5 class="card-title">Directory page web project</h5>
+                                <a href="https://letuanphat21.github.io/web_project/directory.html"
+                                    class="btn btn-view">View</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Card 5 -->
+                     <div class="col-md-3 mb-3">
+                        <div class="card h-100">
+                            <img src="image/result/fPattern.jpg" class="card-img-top" alt="Mô tả ảnh">
+                            <div class="card-body">
+                                <h5 class="card-title">F pattern</h5>
+                                <a href="fPattern.html"
+                                    class="btn btn-view">View</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Card 6 -->
+                    <div class="col-md-3 mb-3">
+                        <div class="card h-100">
+                            <img src="image/result/zPattern.jpg" class="card-img-top" alt="Mô tả ảnh">
+                            <div class="card-body">
+                                <h5 class="card-title">Z pattern</h5>
+                                <a href="zPattern.html"
+                                    class="btn btn-view">View</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -154,8 +251,14 @@
     </div>
 
     <!-- Footer -->
-    <footer>
-        <p>© Nguyễn Phi</p>
+    <footer class="bg-dark text-light text-center">
+        <div class="container">
+            <p>© Nguyễn Phi</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>

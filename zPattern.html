@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .nav-custom .nav-link.active {
+            background-color: #666;
+        }
+
+        .main-content {
+            padding-top: 100px; /* Adjust padding top to ensure content is below header */
+            min-height: calc(100vh - 120px);
+            /* Maintain min height with footer */
+        }
+
+        footer {
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .icon-space {
+            margin-left: 5px;
+        }
+
+        .navbar-brand img {
+            max-height: 40px;
+        }
+
+        /* Custom styles for Z-pattern */
+        .intro-section {
+            background-color: #f8f9fa;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .feature-section {
+          padding: 30px 20px;
+        }
+
+        .feature-item {
+            margin-bottom: 30px;
+        }
+
+        .call-to-action {
+          background-color: #e9ecef;
+          padding: 50px 20px;
+          text-align: center;
+        }
+        .container-fluid {
+             padding-left: 0;
+             padding-right: 0;
+        }
+         .navbar-brand {
+           margin-right: 10px;
+        }
+        .navbar-nav .nav-link {
+            padding: 5px 15px;
+        }
+        .navbar-nav .btn {
+            margin-left: 5px;
+        }
+         .fixed-bottom {
+          position: relative;
+         }
+         
+        /* Responsive image */
+        .img-fluid {
+          max-width: 100%;
+          height: auto;
+        }
+         @media (max-width: 768px) {
+            .intro-section h1 {
+                font-size: 2rem;
+            }
+            .intro-section p {
+                font-size: 1rem;
+            }
+           
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-custom fixed-top">
+        <div class="container-fluid">
+           <a class="navbar-brand" href="index.html">
+                <img src="https://is.vnecdn.net/v101/31/65/11/4116531/assets/images/logo/logo-50.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-home icon-space"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-info-circle icon-space"></i>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lab.html"><i class="fas fa-flask icon-space"></i>Labs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="result.html"><i class="fas fa-chart-bar icon-space"></i>Result</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="lab2.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary" href="lab1.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid main-content">
+      <!-- Intro Section -->
+      <section class="intro-section">
+        <h1>Chào mừng đến với Trang Web Mẫu Z</h1>
+            <p>Trang web này được thiết kế theo mẫu Z, hướng người dùng khám phá nội dung theo cách tự nhiên nhất.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq4JCGd9q8Eha0dlV2rcoLsfouMrrEH1lRPA&s" alt="Intro Image" class="img-fluid mt-4">
+      </section>
+      
+       <!-- Feature Section -->
+       <section class="feature-section">
+        <div class="row">
+           <div class="col-md-4 feature-item">
+              <h2>Tính Năng 1</h2>
+               <p>Mô tả ngắn gọn về tính năng 1 của trang web.</p>
+               <img src="https://s3-sgn09.fptcloud.com/codelearnstorage/Media/Default/Users/3ron/hoa_codewar/z-pattern-angles.png" 
+               style="width: 300px; height: 200px;" alt="Feature 1" class="img-fluid mt-3">
+            </div>
+           <div class="col-md-4 feature-item">
+                <h2>Tính Năng 2</h2>
+                 <p>Mô tả ngắn gọn về tính năng 2 của trang web.</p>
+                <img src="https://thuvien.hocviennhiepanh.com/wp-content/uploads/writzig-zag-pattern.png" 
+                style="width: 300px; height: 200px;" alt="Feature 2" class="img-fluid mt-3">
+           </div>
+           <div class="col-md-4 feature-item">
+             <h2>Tính Năng 3</h2>
+             <p>Mô tả ngắn gọn về tính năng 3 của trang web.</p>
+              <img src="https://media.licdn.com/dms/image/D5612AQGwv2Hp3qlEKg/article-cover_image-shrink_600_2000/0/1658286204904?e=2147483647&v=beta&t=qqDoaUnpYNHcyJf-wmLZgM70rSEgxVbUn333rVkW-pc" 
+              style="width: 300px; height: 200px;"alt="Feature 3" class="img-fluid mt-3">
+           </div>
+         </div>
+       </section>
+         
+          <!-- Call to action Section -->
+          <section class="call-to-action">
+             <h2>Bạn đã sẵn sàng?</h2>
+             <p>Hãy khám phá ngay các nội dung hấp dẫn trên trang!</p>
+              <a href="#" class="btn btn-primary mt-3">Bắt đầu</a>
+          </section>
+     </div>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center">
+        <div class="container">
+            <p>© Nguyễn Phi</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

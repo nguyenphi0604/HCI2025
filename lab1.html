@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Lab 1</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<style>
 		.content-section {
 			padding: 20px;
@@ -36,68 +35,160 @@
 		.readonly-field {
 			background-color: #f8f9fa;
 		}
+		.password-container {
+			position: relative;
+		}
+		.password-toggle {
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			transform: translateY(-50%);
+			cursor: pointer;
+			color: #0d6efd;
+		}
+		.profile-image-preview {
+			width: 100px;
+			height: 100px;
+			background-color: #f8f9fa;
+			border-radius: 50%;
+			margin: 0 auto;
+			background-size: cover;
+			background-position: center;
+		}
+		.error-message {
+			color: red;
+			font-size: 0.9em;
+			margin-top: 5px;
+		}
 	</style>
 </head>
 <body>
 	<!-- Main Content -->
-	<div class="content-section">
-		<div class="form-container">
-			<h1>Create Account</h1>
-			<form>
-				<div class="mb-3">
-					<label for="username" class="form-label">Username</label>
-					<input type="text" class="form-control" id="username" placeholder="Enter your username">
-				</div>
-
-				<div class="mb-3">
-					<label for="password" class="form-label">Password</label>
-					<input type="password" class="form-control" id="password" placeholder="Enter your password">
-					<div class="form-text text-primary">Show</div>
-				</div>
-
-				<div class="mb-3">
-					<label for="email" class="form-label">Email Address</label>
-					<input type="email" class="form-control" id="email" placeholder="Enter your email">
-				</div>
-
-				<div class="mb-3">
-					<label for="fullName" class="form-label">Full Name (Optional)</label>
-					<input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
-				</div>
-
-				<div class="mb-3">
-					<label for="role" class="form-label">Role</label>
-					<select class="form-select" id="role">
-						<option selected>Select your role</option>
-						<option value="admin">Admin</option>
-						<option value="user">User</option>
-					</select>
-				</div>
-
-				<div class="mb-3">
-					<label for="profilePicture" class="form-label">Profile Picture</label>
-					<input type="text" class="form-control" id="profilePicture" placeholder="Enter image URL">
-					<div class="mt-2 text-center">
-						<div style="width: 100px; height: 100px; background-color: #f8f9fa; border-radius: 50%; margin: 0 auto;"></div>
+	<div class="container d-flex justify-content-center align-items-center min-vh-100 overflow-auto">
+		<div class="content-section">
+			<div class="form-container shadow">
+				<h1>Create Account</h1>
+				<form id="createAccountForm">
+					<div class="mb-3">
+						<label for="username" class="form-label">Username <span class="text-danger">*</span></label>
+						<input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+						<div id="usernameError" class="error-message"></div>
 					</div>
-				</div>
 
-				<div class="mb-3">
-					<label class="form-label">Account Created At</label>
-					<input type="text" class="form-control readonly-field" value="2024-09-28 12:34:56" readonly>
-				</div>
+					<div class="mb-3 password-container">
+						<label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+						<input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+						<span class="password-toggle" onclick="togglePasswordVisibility()">Show</span>
+						<div id="passwordError" class="error-message"></div>
+					</div>
 
-				<div class="mb-3">
-					<label class="form-label">Last Updated At</label>
-					<input type="text" class="form-control readonly-field" value="2024-09-28 12:34:56" readonly>
-				</div>
+					<div class="mb-3">
+						<label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+						<input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+						<div id="emailError" class="error-message"></div>
+					</div>
 
-				<div class="btn-container">
-					<button type="submit" class="btn btn-secondary">Create Account</button>
-					<button type="button" class="btn btn-secondary">Cancel</button>
-				</div>
-			</form>
+					<div class="mb-3">
+						<label for="fullName" class="form-label">Full Name (Optional)</label>
+						<input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+					</div>
+
+					<div class="mb-3">
+						<label for="role" class="form-label">Role</label>
+						<select class="form-select" id="role">
+							<option selected>Select your role</option>
+							<option value="admin">Admin</option>
+							<option value="user">User</option>
+						</select>
+					</div>
+
+					<div class="mb-3">
+						<label for="profilePicture" class="form-label">Profile Picture</label>
+						<input type="text" class="form-control" id="profilePicture" placeholder="Enter image URL">
+						<div class="mt-2 text-center">
+							<div class="profile-image-preview" id="profilePicturePreview"></div>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Account Created At</label>
+						<input type="text" class="form-control readonly-field" value="2024-09-28 12:34:56" readonly>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label">Last Updated At</label>
+						<input type="text" class="form-control readonly-field" value="2024-09-28 12:34:56" readonly>
+					</div>
+
+					<div class="btn-container">
+						<button type="submit" class="btn btn-secondary">Create Account</button>
+						<button type="button" class="btn btn-secondary">Cancel</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
+
+	<script>
+		function togglePasswordVisibility() {
+		    const passwordInput = document.getElementById('password');
+		    const passwordToggle = document.querySelector('.password-toggle');
+		    if (passwordInput.type === 'password') {
+		        passwordInput.type = 'text';
+		        passwordToggle.textContent = 'Hide';
+		    } else {
+		        passwordInput.type = 'password';
+		        passwordToggle.textContent = 'Show';
+		    }
+		}
+		document.getElementById('profilePicture').addEventListener('input', function() {
+			const imageUrl = this.value;
+			const preview = document.getElementById('profilePicturePreview');
+			preview.style.backgroundImage = `url(${imageUrl})`;
+		});
+		
+		document.getElementById('createAccountForm').addEventListener('submit', function(event) {
+		  event.preventDefault();
+		  resetErrors();
+		  
+		  let isValid = true;
+		  const username = document.getElementById('username').value;
+		  if (!username) {
+			  document.getElementById('usernameError').textContent = 'Username is required';
+			  isValid = false;
+		  }
+		  const password = document.getElementById('password').value;
+		  if (!password) {
+			  document.getElementById('passwordError').textContent = 'Password is required';
+			  isValid = false;
+		  }
+		   const email = document.getElementById('email').value;
+		  if (!email) {
+			  document.getElementById('emailError').textContent = 'Email is required';
+			  isValid = false;
+		  } else if (!isValidEmail(email)) {
+			   document.getElementById('emailError').textContent = 'Email is invalid';
+			   isValid = false;
+		  }
+
+		   if (isValid) {
+			    alert('Account created successfully!');
+			    document.getElementById('createAccountForm').reset();
+			    document.getElementById('profilePicturePreview').style.backgroundImage = '';
+
+		    }
+		});
+		function resetErrors() {
+			  document.getElementById('usernameError').textContent = '';
+			  document.getElementById('passwordError').textContent = '';
+			  document.getElementById('emailError').textContent = '';
+		}
+		function isValidEmail(email) {
+				const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+				return emailRegex.test(email);
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
